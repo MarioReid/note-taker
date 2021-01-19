@@ -7,6 +7,12 @@ var api = require("./routes/apiRoutes")
 
 //tell node we are creating a server
 var app = express();
+
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+
 //Set initial port
 var PORT = process.env.PORT || 3000;
 
